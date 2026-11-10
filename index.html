@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#102044">
+  <title>PonyBuy spreadsheet | Kategorie CAFANS i poradnik zakupowy</title>
+  <meta name="description" content="PonyBuy spreadsheet po polsku. Przejdź do 10 kategorii CAFANS i sprawdź, jak porównać oferty, dobrać rozmiar, ocenić zdjęcia QC oraz koszt dostawy do Polski.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="PonyBuy spreadsheet | Kategorie CAFANS i poradnik zakupowy">
+  <meta property="og:description" content="Katalog kategorii CAFANS i polski poradnik o linkach do produktów, wymiarach, zdjęciach QC oraz kosztach wysyłki.">
+  <meta property="og:image" content="https://assets.atmos-tokyo.com/items/2/cn8490-100-3.jpg">
+  <meta property="og:image:alt" content="Biały but Nike Air Max 90 widziany z boku">
+  <link rel="icon" href="https://www.cafans.com/favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://assets.atmos-tokyo.com">
+  <!--
+    Frazy pomocnicze: linki do produktów PonyBuy, zdjęcia QC PonyBuy,
+    rozmiary sneakersów, wysyłka PonyBuy do Polski.
+    Google nie udostępnił pierwszej strony wyników. Analiza tematów opiera się
+    na 10 wynikach alternatywnego wyszukiwania tego samego hasła.
+  -->
+  <style>
+    :root{color-scheme:light;--navy:#102044;--ink:#17243b;--muted:#465771;--paper:#f2f5fb;--line:#cbd5e6;--lime:#d9f782;--white:#fff}
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
+    h1,h2,h3,p,figure,ul,ol{margin:0}
+    h1,h2,h3{line-height:1.13}
+    h1{font-size:clamp(2.15rem,6.2vw,5.1rem);letter-spacing:-.055em;overflow-wrap:anywhere}
+    h2{font-size:clamp(1.55rem,3.7vw,2.45rem);letter-spacing:-.03em}
+    h3{font-size:1.2rem}
+    a{color:inherit;text-underline-offset:.22em}
+    :focus-visible{outline:3px solid #175ac4;outline-offset:3px}
+    .dark :focus-visible{outline-color:var(--lime)}
+    .wrap{width:min(72rem,calc(100% - 2rem));margin-inline:auto}
+    .dark{background:var(--navy);color:var(--white)}
+    .bar{min-height:56px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem 1rem;padding-block:.5rem}
+    .brand{font-weight:800}
+    .tag{font-size:.77rem;font-weight:800;letter-spacing:.095em;text-transform:uppercase}
+    .bar .tag{color:var(--lime)}
+    .catalog{padding-block:1.15rem}
+    .catalog h2{font-size:1rem;margin-bottom:.65rem;letter-spacing:0}
+    .categories{list-style:none;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.42rem}
+    .categories a{display:flex;justify-content:space-between;align-items:center;gap:.4rem;min-height:44px;height:100%;padding:.45rem .65rem;border:1px solid var(--line);background:var(--white);font-size:.92rem;font-weight:750;line-height:1.25;text-decoration:none}
+    .categories a:hover{background:var(--lime);text-decoration:underline}
+    .hero{display:grid;grid-template-columns:3fr 2fr}
+    .hero-copy{display:grid;align-content:center;justify-items:start;gap:.85rem;padding:clamp(1.15rem,4vw,3.25rem)}
+    .hero-copy .tag{color:var(--lime)}
+    .hero-copy p:not(.tag){max-width:55ch;color:#e2e9f7}
+    .cta{display:inline-flex;align-items:center;min-height:44px;background:var(--lime);color:var(--navy);padding:.45rem .8rem;font-weight:800;text-decoration:none}
+    .cta:hover{text-decoration:underline}
+    .hero figure{display:grid;align-content:center;background:var(--white);color:var(--ink)}
+    img{display:block;width:100%;height:auto}
+    .hero img{aspect-ratio:5/4;object-fit:contain}
+    figcaption{padding:.55rem .75rem;color:var(--muted);font-size:.86rem}
+    .section{margin-block:clamp(2rem,5vw,4rem)}
+    .section>p{margin-top:.55rem;max-width:68ch;color:var(--muted)}
+    .gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem;margin-top:.9rem}
+    .gallery figure{background:var(--white);border:1px solid var(--line)}
+    .gallery img{aspect-ratio:1;object-fit:contain}
+    .guides{margin-top:.9rem;border-top:1px solid var(--line)}
+    .guides article{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:1rem 2rem;padding:1.15rem 0;border-bottom:1px solid var(--line)}
+    .guides h3 span{display:block;margin-bottom:.35rem;color:var(--muted);font-size:.83rem;font-variant-numeric:tabular-nums}
+    .guides p+p{margin-top:.6rem}
+    .faq{max-width:55rem}
+    .faq h2{margin-bottom:.9rem}
+    details{background:var(--white);border-bottom:1px solid var(--line)}
+    details:first-of-type{border-top:1px solid var(--line)}
+    summary{min-height:44px;padding:.72rem .85rem;font-weight:750;cursor:pointer}
+    details p{padding:0 .85rem .85rem}
+    footer{padding:1rem 0}
+    footer p{max-width:72ch;margin-top:.45rem;color:#e2e9f7;font-size:.9rem}
+    @media(max-width:54rem){.categories{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media(max-width:38rem){.hero,.guides article{grid-template-columns:1fr}.categories,.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.hero img{aspect-ratio:16/10}.guides article{gap:.55rem}.wrap{width:calc(100% - 1.25rem)}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "PonyBuy spreadsheet | Kategorie CAFANS i poradnik zakupowy",
+        "inLanguage": "pl",
+        "description": "PonyBuy spreadsheet po polsku. Przejdź do 10 kategorii CAFANS i sprawdź, jak porównać oferty, dobrać rozmiar, ocenić zdjęcia QC oraz koszt dostawy do Polski."
+      },
+      {
+        "@type": "FAQPage",
+        "name": "Pytania o PonyBuy spreadsheet",
+        "inLanguage": "pl",
+        "mainEntity": [
+          {"@type":"Question","name":"Co to jest PonyBuy spreadsheet?","acceptedAnswer":{"@type":"Answer","text":"To określenie listy lub katalogu odsyłaczy do produktów. Pomaga wyszukać i porównać oferty. Ta strona zawiera poradnik oraz odsyłacze do kategorii CAFANS."}},
+          {"@type":"Question","name":"Jak sprawdzić, czy link do produktu jest aktualny?","acceptedAnswer":{"@type":"Answer","text":"Otwórz ofertę i porównaj nazwę sprzedawcy, kod modelu, wariant oraz dostępność rozmiaru z zapisanymi informacjami. Zapisz datę sprawdzenia."}},
+          {"@type":"Question","name":"Jak sprawdzić rozmiar sneakersów przed zakupem?","acceptedAnswer":{"@type":"Answer","text":"Zmierz obie stopy w skarpetach, w których zamierzasz nosić buty. Dłuższy pomiar porównaj z tabelą konkretnego modelu. Sprawdź, czy tabela podaje długość stopy, czy długość wkładki."}},
+          {"@type":"Question","name":"Czy zdjęcia QC potwierdzają autentyczność produktu?","acceptedAnswer":{"@type":"Answer","text":"Samo zdjęcie QC pozwala ocenić widoczne szczegóły i stan przedmiotu. Do ustalenia pochodzenia potrzebna jest osobna weryfikacja sprzedawcy i dokumentów zakupu."}},
+          {"@type":"Question","name":"Jak oszacować koszt wysyłki do Polski?","acceptedAnswer":{"@type":"Answer","text":"Porównaj stawki dla tej samej wagi i wymiarów zapakowanej paczki. Sprawdź sposób naliczania wagi gabarytowej oraz to, które opłaty są już uwzględnione w wycenie."}}
+        ]
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/xjuio/">
+</head>
+<body>
+  <header class="dark">
+    <div class="wrap bar">
+      <a class="brand" href="https://www.cafans.com">www.cafans.com</a>
+      <p class="tag">Przewodnik zakupowy · Polska</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <nav class="catalog" aria-labelledby="kategorie">
+      <h2 id="kategorie">Przeglądaj kategorie CAFANS</h2>
+      <ul class="categories">
+        <li><a href="https://cafans.com/category-911-Shoes.html">Buty <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://cafans.com/category-912-Hoodies%2FSweaters.html">Bluzy i swetry <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://cafans.com/category-913-T-Shirts.html">Koszulki <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://cafans.com/category-914-Jackets.html">Kurtki <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://cafans.com/category-915-Pants%2FShorts.html">Spodnie i szorty <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://cafans.com/category-916-Headwear.html">Nakrycia głowy <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://cafans.com/category-917-Sets.html">Komplety <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://cafans.com/category-918-underwear%2Funderpants.html">Bielizna <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://cafans.com/category-919-Jersey.html">Koszulki sportowe <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://cafans.com/category-920-Accessories.html">Akcesoria <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </nav>
+
+    <section class="hero dark" aria-labelledby="tytul">
+      <div class="hero-copy">
+        <p class="tag">Od linku do decyzji</p>
+        <h1 id="tytul">PonyBuy spreadsheet</h1>
+        <p>Jeśli szukasz listy linków do butów, odzieży i dodatków, zacznij od kategorii CAFANS. Przy porównywaniu ofert zapisz konkretny wariant, wymiary oraz koszt dostawy. Dzięki temu łatwiej wrócisz do tej samej wersji produktu przed zamówieniem.</p>
+        <a class="cta" href="https://www.cafans.com">Otwórz katalog CAFANS <span aria-hidden="true">&nbsp;↗</span></a>
+      </div>
+      <figure>
+        <img src="https://assets.atmos-tokyo.com/items/2/cn8490-100-3.jpg" width="1200" height="1200" loading="eager" fetchpriority="high" alt="Biały but Nike Air Max 90 widziany z boku">
+        <figcaption>Nike Air Max 90 · widok boczny pokazuje profil podeszwy i kształt cholewki.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section" aria-labelledby="detale">
+      <h2 id="detale">Na które detale patrzeć na zdjęciach?</h2>
+      <p>Zdjęcia marek służą jako przykłady do porównania fasonu i detali. Dostępność konkretnego modelu sprawdź w jego ofercie.</p>
+      <div class="gallery">
+        <figure>
+          <img src="https://en.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-monogram-denim-jacket--FVJA29EFY610_PM2_Front%20view.png?hei=400&amp;wid=400&amp;fmt=webp" width="400" height="400" loading="lazy" decoding="async" alt="Niebieska kurtka jeansowa Louis Vuitton z monogramem i kieszeniami na piersi">
+          <figcaption>Louis Vuitton · krój kurtki i rozmieszczenie kieszeni.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://media.gucci.com/style/DarkGray_Center_0_0_490x490/1738780212/838034_4HBGG_9771_009_100_0000_Light-gg-canvas-baseball-cap-with-print.jpg" width="490" height="490" loading="lazy" decoding="async" alt="Beżowa czapka Gucci z motywem GG widziana od tyłu, z regulowanym paskiem">
+          <figcaption>Gucci · wzór tkaniny i regulacja obwodu.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://mygemma.com/cdn/shop/files/134859-fv_9cc0f7cd-63bd-44cf-8597-2f32c358bca8_1200x.jpg?v=1711675218" width="1200" height="1200" loading="lazy" decoding="async" alt="Czarno-złota bransoletka Hermès Clic H z zapięciem w kształcie litery H">
+          <figcaption>Hermès · kształt zapięcia bransoletki.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://assets.christiandior.com/is/image/diorprod/N3523WOMZID301_SBG_E01-1?%24r9x10_raw%24=&amp;bfc=on&amp;crop=0%2C0%2C4000%2C5000&amp;hei=400&amp;qlt=78&amp;wid=370&amp;fmt=webp" width="370" height="400" loading="lazy" decoding="async" alt="Naszyjnik Dior Clair D Lune w złotym kolorze z ozdobą z kryształkami">
+          <figcaption>Dior · układ łańcuszka i położenie zawieszki.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="poradniki">
+      <h2 id="poradniki">Co zapisać przed zamówieniem</h2>
+      <div class="guides">
+        <article>
+          <h3><span>01 / OFERTA</span>Jak porównywać linki do produktów PonyBuy</h3>
+          <div>
+            <p>Zapisz adres oferty źródłowej, nazwę sprzedawcy, kod modelu, kolor i wybrany rozmiar. Osobno zanotuj datę sprawdzenia dostępności. Przy linkach z Taobao, Weidian lub 1688 upewnij się, że wybrany pośrednik obsługuje konkretną ofertę.</p>
+            <p>Jeśli jedna karta zawiera kilka wersji produktu, zanotuj dokładną nazwę wybranego wariantu. Przy porównaniu cen sprawdź walutę, koszt dostawy do magazynu i ewentualną minimalną liczbę sztuk w ofercie.</p>
+          </div>
+        </article>
+        <article>
+          <h3><span>02 / DOPASOWANIE</span>Rozmiary sneakersów i zdjęcia QC PonyBuy</h3>
+          <div>
+            <p>Przy butach porównaj długość stopy w centymetrach z tabelą rozmiarów modelu. Przy kurtce zmierz na płasko szerokość pod pachami i długość rękawa w ubraniu, które dobrze leży. Przy czapce zapisz obwód głowy, a przy bransoletce obwód nadgarstka.</p>
+            <p>Jeśli masz dostęp do zdjęć kontroli jakości z magazynu, obejrzyj metkę rozmiaru, szwy i krawędzie podeszwy. Przy dodatkach poproś o zbliżenie zapięcia, a przy wątpliwościach dotyczących wymiarów o zdjęcie z miarką od początku do końca mierzonego odcinka.</p>
+          </div>
+        </article>
+        <article>
+          <h3><span>03 / DOSTAWA</span>Wysyłka PonyBuy do Polski i porównanie kosztów</h3>
+          <div>
+            <p>W kalkulacji uwzględnij cenę towaru, dostawę krajową, opłaty pośrednika i koszt przesyłki międzynarodowej. Do porównania w złotych zapisz kurs przeliczenia. Sprawdź, czy wycena obejmuje podatki lub inne opłaty związane z dostawą.</p>
+            <p>Porównuj przewoźników przy tych samych wymiarach kartonu i tej samej wadze rzeczywistej. Sprawdź, czy przewoźnik nalicza wagę gabarytową i czy wybrana opcja obejmuje śledzenie przesyłki.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section faq" aria-labelledby="pytania">
+      <h2 id="pytania">Pytania o PonyBuy spreadsheet</h2>
+      <details open>
+        <summary>Co to jest PonyBuy spreadsheet?</summary>
+        <p>To określenie listy lub katalogu odsyłaczy do produktów. Pomaga wyszukać i porównać oferty. Ta strona zawiera poradnik oraz odsyłacze do kategorii CAFANS.</p>
+      </details>
+      <details>
+        <summary>Jak sprawdzić, czy link do produktu jest aktualny?</summary>
+        <p>Otwórz ofertę i porównaj nazwę sprzedawcy, kod modelu, wariant oraz dostępność rozmiaru z zapisanymi informacjami. Zapisz datę sprawdzenia.</p>
+      </details>
+      <details>
+        <summary>Jak sprawdzić rozmiar sneakersów przed zakupem?</summary>
+        <p>Zmierz obie stopy w skarpetach, w których zamierzasz nosić buty. Dłuższy pomiar porównaj z tabelą konkretnego modelu. Sprawdź, czy tabela podaje długość stopy, czy długość wkładki.</p>
+      </details>
+      <details>
+        <summary>Czy zdjęcia QC potwierdzają autentyczność produktu?</summary>
+        <p>Samo zdjęcie QC pozwala ocenić widoczne szczegóły i stan przedmiotu. Do ustalenia pochodzenia potrzebna jest osobna weryfikacja sprzedawcy i dokumentów zakupu.</p>
+      </details>
+      <details>
+        <summary>Jak oszacować koszt wysyłki do Polski?</summary>
+        <p>Porównaj stawki dla tej samej wagi i wymiarów zapakowanej paczki. Sprawdź sposób naliczania wagi gabarytowej oraz to, które opłaty są już uwzględnione w wycenie.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="dark">
+    <div class="wrap">
+      <a class="brand" href="https://www.cafans.com">www.cafans.com</a>
+      <p>Niezależny poradnik zakupowy. Nazwy marek identyfikują przykładowe modele na zdjęciach.</p>
+    </div>
+  </footer>
+</body>
+</html>
